@@ -1,17 +1,39 @@
-* {
-  margin:0px;
-  padding:0px;
+.nav-link {
+    color: #FFFFFF !important;
+}
+/* Shadow class courtesy of https://tobiasahlin.com/blog/layered-smooth-box-shadows/
+*/
+.shadow {
+  box-shadow: 0 2px 1px rgba(0,0,0,0.09),
+              0 4px 2px rgba(0,0,0,0.09),
+              0 8px 4px rgba(0,0,0,0.09),
+              0 16px 8px rgba(0,0,0,0.09),
+              0 32px 16px rgba(0,0,0,0.09);
+}
+/* Create a small amount of spacing between divs */
+
+.div-spacing {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+body {
+    background-color: #374256;
+}
+hr {
+    background-color: #ffc107;
+}
+nav a:hover {
+    color: #ffc107 !important;
 }
 
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+.color-yellow {
+    color: #ffc107 !important;
+}
+.color-darkgray {
+    color: #374256 !important;
+    text : bold;
+}
+.no-border {
+    border : 0px;
 }
