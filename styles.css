@@ -37,3 +37,7 @@ nav a:hover {
 .no-border {
     border : 0px;
 }
+
+.gap {
+    column-gap : 10px;
+}
