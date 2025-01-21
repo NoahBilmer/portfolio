@@ -1,0 +1,76 @@
+<!doctypehtml>
+    <html lang=EN-us>
+
+    <head>
+        <meta charset=utf-8>
+        <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+        <title>Tetris</title>
+        <meta content="raylib web game" name=title>
+        <meta content="New raylib web videogame, developed using raylib videogames library" name=description>
+        <meta content="raylib, games, html5, programming, C, C++, library, learn, videogames" name=keywords>
+        <meta content="width=device-width" name=viewport>
+        <meta content="raylib web game" property=og:title>
+        <meta content=image/png property=og:image:type>
+        <meta content=https://www.raylib.com/common/img/raylib_logo.png property=og:image>
+        <meta content=raylib.com property=og:site_name>
+        <meta content=https://www.raylib.com/games.html property=og:url>
+        <meta content="New raylib web videogame, developed using raylib videogames library" property=og:description>
+        <meta content=summary name=twitter:card>
+        <meta content=@raysan5 name=twitter:site>
+        <meta content="raylib web game" name=twitter:title>
+        <meta content=https://www.raylib.com/common/raylib_logo.png name=twitter:image>
+        <meta content=https://www.raylib.com/games.html name=twitter:url>
+        <meta content="New raylib web game, developed using raylib videogames library" name=twitter:description>
+        <link href=https://www.raylib.com/favicon.ico rel="shortcut icon">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="emscripten-styles.css" rel="stylesheet">
+        <link href="../styles.css" rel="stylesheet">
+       
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+            <span class="navbar-brand mb-0 h1"><span class="color-yellow">&lt;</span><span class="color-yellow">&gt;</span></span>
+            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../about.html">About</a>
+       </nav>
+       <br>
+            <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <canvas class="emscripten" id=canvas oncontextmenu=event.preventDefault()
+                        tabindex=-1></canvas>
+            </div>
+            <br>
+            
+                <div class="card text-white bg-dark mb-0">
+                <div class="card-body">
+                    <p class="card-text">Gameplay Controls: Use the arrow keys to move, space to rotate, and ESC to exit to the title screen.</p>
+                    <p class="card-text">View the code on my <a href="https://github.com/NoahBilmer/tetris">github</a></p>
+                        </div>
+                    </div>
+                
+        </div>
+        <script src=https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js/dist/FileSaver.min.js></script>
+        <script>
+        function saveFileFromMEMFSToDisk(e, a) { 
+            var i, o = FS.readFile(e); 
+            i = new Blob([o.buffer], { type: "application/octet-binary" }), saveAs(i, a) }
+        </script>
+        <script>
+     Module = {
+         printErr: function(e) {
+             arguments.length > 1 && (e = Array.prototype.slice.call(arguments).join(" ")), console.error(e)
+         },
+         canvas: function() {
+             var e = document.querySelector("#canvas");
+             return e.addEventListener("webglcontextlost", (function(e) {
+                 alert("WebGL context lost. You will need to reload the page."), e.preventDefault()
+             }), !1), e
+         }(),
+         totalDependencies: 0,
+     };
+  </script>
+        <script src=tetris.js async></script>
+    </body>
+
+    </html>
