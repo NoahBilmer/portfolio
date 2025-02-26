@@ -13,8 +13,8 @@
 /* Create a small amount of spacing between divs */
 
 .div-spacing {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 body {
